@@ -29,13 +29,11 @@ def N_queen(n):
         for j in range(0,N):
             if (not(is_attack(i,j))) and (board[i][j]!=1):
                 board[i][j] = 1
-
-#recursion
-#wether we can put the next queen with this arrangment or not
-    if N_queen(n-1)==True:
-        return True
-    board[i][j] = 0
-    return False
+                if N_queen(n-1)==True:
+                    return True
+                board[i][j] = 0
+                return False
+            
 N_queen(N)
 for i in board:
     print (i)
