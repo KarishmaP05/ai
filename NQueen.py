@@ -32,7 +32,7 @@ def N_queen(n):
                 if N_queen(n-1)==True:
                     return True
                 board[i][j] = 0
-                return False
+    return False
             
 N_queen(N)
 for i in board:
